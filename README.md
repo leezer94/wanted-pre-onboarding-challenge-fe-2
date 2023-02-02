@@ -3,6 +3,18 @@
 ## Document 배포 링크
 [배포링크](https://leezer94.github.io/wanted-pre-onboarding-challenge-fe-2/)
 
+## 실행방법
+
+### 설치
+``` shell
+$ npm install
+$ npm prepare
+```
+### 빌드
+``` shell
+$ npm run doc
+
+```
 
 ## 📝 Requirements
 
