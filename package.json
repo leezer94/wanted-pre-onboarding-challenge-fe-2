@@ -1,0 +1,22 @@
+{
+  "name": "wanted-pre-onboarding-challenge-fe-2",
+  "version": "1.0.0",
+  "description": "원티드 온보딩 2월 타입스크립트 사전과제",
+  "main": "index.js",
+  "scripts": {
+    "doc": "jsdoc -c jsdoc.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/leezer94/wanted-pre-onboarding-challenge-fe-2.git"
+  },
+  "author": "Keonhee Lee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/leezer94/wanted-pre-onboarding-challenge-fe-2/issues"
+  },
+  "homepage": "https://github.com/leezer94/wanted-pre-onboarding-challenge-fe-2#readme",
+  "devDependencies": {
+    "jsdoc": "^4.0.0"
+  }
+}
