@@ -1,9 +1,15 @@
 # 원티드 온보딩 2월 타입스크립트 사전과제
 
-# 사용된 라이브러리
+# Dependencies
 
 ```json
-JSDoc : 4.0.0
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.0",
+    "jsdoc": "^4.0.0",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.3"
 ```
 
 ---
