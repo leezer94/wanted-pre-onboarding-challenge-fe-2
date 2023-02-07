@@ -1,5 +1,25 @@
 // @ts-check
 
+interface Todo {
+  id: number;
+  content: string;
+  completed: boolean;
+  category: string;
+  tags?: string | Array<string>;
+}
+
+interface TodoFunction {
+  CreateTodo: (
+    content: string,
+    category: string,
+    tags?: string | Array<string>,
+  ) => void;
+  GetTodos: () => void;
+  GetTodoById: (id: number) => void;
+  UpdateTodo: ({ id, content, completed, category, tags }: Todo) => void;
+  DeleteTodo: (id: number, tags?: string | Array<string>) => void;
+}
+
 /**
  * Todo object type definition
  * @typedef {Object} Todo
@@ -14,7 +34,7 @@
  * @type {Todo[]}
  */
 
-const todos = [
+const todos: Array<Todo> = [
   {
     id: 1,
     content: 'content',
@@ -36,39 +56,36 @@ const todos = [
  * 할 일을 내용없이 추가할 수 없다.
  * </b>
  *
- * @async
  * @function createTodo
  * @param {string} content  - A string param
  * @param {string} category - A string param
  * @param {string[] | string } [tags = undefined] - An optional param with String or Array of strings
- * @returns {Promise<Todo | void>} - returns Todo ( 내부 로직 없이 void )
+ * @returns {void} - returns Todo ( 내부 로직 없이 void )
  * @throws {Error} - throws Error when failed to request
  */
 
-const createTodo = async (content, category, tags) => {};
+const createTodo: TodoFunction['CreateTodo'] = (content, category, tags) => {};
 
 /**
  * <b>
  * 모든 할 일을 조회할 수 있다.
  * </b>
  *
- * @async
  * @function getTodos
- * @return {Promise<Todo[] | void>} - returns Array of Todo ( 내부 로직 없이 void )
+ * @return {void} - returns Array of Todo ( 내부 로직 없이 void )
  * @throws {Error} - throws Error when failed to request
  */
 
-const getTodos = async () => {};
+const getTodos: TodoFunction['GetTodos'] = () => {};
 
 /**
  * <b>
  * ID를 기반으로 특정 할 일을 조회할 수 있다.
  * </b>
  *
- * @async
  * @function getTodoById
  * @param {number} id - A Number param
- * @returns {Promise<Todo | void>} - returns Todo ( 내부 로직 없이 void )
+ * @returns {void} - returns Todo ( 내부 로직 없이 void )
  * @throws {Error}
  *
  */
@@ -78,7 +95,7 @@ const getTodos = async () => {};
  * @param {number} id - A Number param
  */
 
-const getTodoById = async (id) => {};
+const getTodoById: TodoFunction['GetTodoById'] = (id) => {};
 
 /**
  * <pre>
@@ -88,18 +105,24 @@ const getTodoById = async (id) => {};
  * </b>
  * </pre>
  *
- * @async
  * @function updateTodo
- * @param {number} id - A Number param
- * @param {string} [content] - A optional String param
- * @param {boolean} [completed] - A optional Boolean param
- * @param {string} [category] - A optional string param
- * @param {string | string[]} [tags] - A optional param with string or Array of strings
- * @returns {Promise<Todo | void>} - returns A modified Todo ( 내부 로직 없이 void )
+ * @param {Todo} todo - A Object param
+ * @param {number} todo.id - A Number param
+ * @param {string} todo.[content] - A optional String param
+ * @param {boolean} todo.[completed] - A optional Boolean param
+ * @param {string} todo.[category] - A optional string param
+ * @param {string | string[]} todo.[tags] - A optional param with string or Array of strings
+ * @returns {void} - returns A modified Todo ( 내부 로직 없이 void )
  * @throws {Error}
  */
 
-const updateTodo = async (id, content, completed, category, tags) => {};
+const updateTodo: TodoFunction['UpdateTodo'] = ({
+  id,
+  content,
+  completed,
+  category,
+  tags,
+}) => {};
 
 /**
  * <pre>
@@ -111,11 +134,10 @@ const updateTodo = async (id, content, completed, category, tags) => {};
  * </b>
  * </pre>
  *
- * @async
  * @function deleteTodo
  * @param {number} [id] - A Number param
  * @param {string | string[]} [tags]
- * @returns {Promise<Todo | Todo[] | void>}
+ * @returns {void}
  * @throws {Error}
  */
-const deleteTodo = async (id, tags) => {};
+const deleteTodo: TodoFunction['DeleteTodo'] = (id, tags) => {};
