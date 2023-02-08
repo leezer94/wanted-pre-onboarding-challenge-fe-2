@@ -17,8 +17,22 @@ interface TodoFunctionType {
   ) => void;
   GetTodos: () => void;
   GetTodoById: (id: number) => void;
-  UpdateTodo: ({ id, content, completed, category, tags }: Todo) => void;
-  DeleteTodo: (id: number, tags?: string | Array<string>) => void;
+  UpdateTodo: ({
+    id,
+    content,
+    completed,
+    category,
+    tags,
+  }: {
+    id: number;
+    content?: string;
+    completed?: boolean;
+    category?: string;
+    tags?: string | Array<string>;
+  }) => void;
+  DeleteTodoById: (id: number) => void;
+  DeleteTagsById: (id: number, tags?: string | Array<string>) => void;
+  DeleteAllTodos: () => void;
 }
 
 /**
@@ -73,6 +87,8 @@ const createTodo: TodoFunctionType['CreateTodo'] = (
   return;
 };
 
+createTodo('content', 'category');
+
 /**
  * <b>
  * 모든 할 일을 조회할 수 있다.
@@ -86,6 +102,8 @@ const createTodo: TodoFunctionType['CreateTodo'] = (
 const getTodos: TodoFunctionType['GetTodos'] = () => {
   return;
 };
+
+getTodos();
 
 /**
  * <b>
@@ -107,6 +125,8 @@ const getTodos: TodoFunctionType['GetTodos'] = () => {
 const getTodoById: TodoFunctionType['GetTodoById'] = (id) => {
   return;
 };
+
+getTodoById(1);
 
 /**
  * <pre>
@@ -137,6 +157,19 @@ const updateTodo: TodoFunctionType['UpdateTodo'] = ({
   return;
 };
 
+// 할 일의 내용만 변경
+updateTodo({ id: 1, content: 'content' });
+
+// 할 일의 completed 상태만 변경
+updateTodo({ id: 1, completed: true });
+
+// 할 일의 태그만 변경
+updateTodo({ id: 1, tags: 'newTag' });
+updateTodo({ id: 1, tags: ['tag1', 'tag2'] });
+
+// 할 일의 카테고리만 변경
+updateTodo({ id: 1, category: 'category' });
+
 /**
  * <pre>
  * <b>
@@ -153,6 +186,29 @@ const updateTodo: TodoFunctionType['UpdateTodo'] = ({
  * @returns {void}
  * @throws {Error}
  */
-const deleteTodo: TodoFunctionType['DeleteTodo'] = (id, tags) => {
+
+const deleteTodoById: TodoFunctionType['DeleteTodoById'] = (id) => {
   return;
 };
+
+const deleteTagsById: TodoFunctionType['DeleteTagsById'] = (id, tags) => {
+  return;
+};
+
+const deleteAllTodos: TodoFunctionType['DeleteAllTodos'] = () => {
+  return;
+};
+
+// Id 를 기반으로 할 일 삭제
+deleteTodoById(3);
+
+// 특정 태그만 삭제한다.
+deleteTagsById(3, 'tag-to-be-deleted');
+
+// 모든 태그를 삭제한다.
+
+deleteTagsById(3);
+
+// 모든 할 일을 삭제한다.
+
+deleteAllTodos();
