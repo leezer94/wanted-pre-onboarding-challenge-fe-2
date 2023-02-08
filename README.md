@@ -11,7 +11,7 @@ JSDoc : 4.0.0
 ## 📝 Requirements
 
 - [x] JSDoc을 활용해 문서화한다.
-- [ ] GitHub Page를 활용해 JSDoc 정적 페이지를 배포한다.
+- [x] GitHub Page를 활용해 JSDoc 정적 페이지를 배포한다.
 
 ### Todo
 
