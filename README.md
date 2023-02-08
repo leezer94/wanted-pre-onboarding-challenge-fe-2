@@ -1,5 +1,9 @@
 # 원티드 온보딩 2월 타입스크립트 사전과제
 
+[사전과제 진행 브랜치](https://github.com/leezer94/wanted-pre-onboarding-challenge-fe-2/tree/requirement-pre)
+
+[1주차 과제 진행 브랜치](https://github.com/leezer94/wanted-pre-onboarding-challenge-fe-2/tree/requirement-week-1)
+
 ## Document 배포 링크
 
 [배포링크](https://leezer94.github.io/wanted-pre-onboarding-challenge-fe-2/)
@@ -22,19 +26,22 @@ $ npm run doc
 ## Dependencies
 
 ```json
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "@typescript-eslint/parser": "^5.51.0",
     "eslint": "^8.33.0",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.0",
     "jsdoc": "^4.0.0",
     "lint-staged": "^13.1.0",
-    "prettier": "^2.8.3"
+    "prettier": "^2.8.3",
+    "typescript": "^4.9.5"
 ```
 
 ## 📝 Requirements
 
 <details>
-  <summary>사전과제 기능 요구사항</summary>
+  <summary>사전과제 기능 요구사항</summary> 
   
 - [x] JSDoc을 활용해 문서화한다.
 - [x] GitHub Page를 활용해 JSDoc 정적 페이지를 배포한다.
