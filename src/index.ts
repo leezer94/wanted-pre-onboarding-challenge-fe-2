@@ -8,7 +8,8 @@ interface Todo {
   tags?: string | Array<string>;
 }
 
-interface TodoFunction {
+// interface
+interface TodoFunctionType {
   CreateTodo: (
     content: string,
     category: string,
@@ -64,7 +65,13 @@ const todos: Array<Todo> = [
  * @throws {Error} - throws Error when failed to request
  */
 
-const createTodo: TodoFunction['CreateTodo'] = (content, category, tags) => {};
+const createTodo: TodoFunctionType['CreateTodo'] = (
+  content,
+  category,
+  tags,
+) => {
+  return;
+};
 
 /**
  * <b>
@@ -76,7 +83,9 @@ const createTodo: TodoFunction['CreateTodo'] = (content, category, tags) => {};
  * @throws {Error} - throws Error when failed to request
  */
 
-const getTodos: TodoFunction['GetTodos'] = () => {};
+const getTodos: TodoFunctionType['GetTodos'] = () => {
+  return;
+};
 
 /**
  * <b>
@@ -95,7 +104,9 @@ const getTodos: TodoFunction['GetTodos'] = () => {};
  * @param {number} id - A Number param
  */
 
-const getTodoById: TodoFunction['GetTodoById'] = (id) => {};
+const getTodoById: TodoFunctionType['GetTodoById'] = (id) => {
+  return;
+};
 
 /**
  * <pre>
@@ -116,13 +127,15 @@ const getTodoById: TodoFunction['GetTodoById'] = (id) => {};
  * @throws {Error}
  */
 
-const updateTodo: TodoFunction['UpdateTodo'] = ({
+const updateTodo: TodoFunctionType['UpdateTodo'] = ({
   id,
   content,
   completed,
   category,
   tags,
-}) => {};
+}) => {
+  return;
+};
 
 /**
  * <pre>
@@ -140,4 +153,6 @@ const updateTodo: TodoFunction['UpdateTodo'] = ({
  * @returns {void}
  * @throws {Error}
  */
-const deleteTodo: TodoFunction['DeleteTodo'] = (id, tags) => {};
+const deleteTodo: TodoFunctionType['DeleteTodo'] = (id, tags) => {
+  return;
+};
